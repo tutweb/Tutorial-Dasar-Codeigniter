@@ -32,6 +32,7 @@ class Products_model extends CI_Model
 	function updateProduct($id)
 	{
 		//update produk berdasarkan id
+		$this->db->update('msProduct', array('id' => $_POST['id']));
 	}
 
 	function deleteProduct($id)
