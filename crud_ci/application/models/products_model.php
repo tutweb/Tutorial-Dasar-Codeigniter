@@ -21,6 +21,11 @@ class Products_model extends CI_Model
 	function getProduct($id)
 	{
 		//select produk berdasarkan id yang dimiliki	
+		$this->db->select("*");
+		$this->db->from("msProduct");
+		$this->db->where("id", $id);
+
+		return $this->db->get();
 	}
 
 	function addProduct($data)
